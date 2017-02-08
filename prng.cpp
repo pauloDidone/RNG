@@ -39,9 +39,9 @@ void lfsr_f (){
 
 	do
 	{
-			//cout << lfsr << endl;
-			outputFile << lfsr << endl;
-			//configuração dos taps nas posições 32, 22, 2 e 1, conforme polinômio primitivo para 32 bits
+		//cout << lfsr << endl;
+		outputFile << lfsr << endl;
+		//configuração dos taps nas posições 32, 22, 2 e 1, conforme polinômio primitivo para 32 bits
 	    	aux  = ((lfsr >> 0) ^ (lfsr >> 10) ^ (lfsr >> 30) ^ (lfsr >> 31) ) & um;
 	    	lfsr =  (lfsr >> 1) | (aux << 31);
 	    	++periodo;
@@ -64,9 +64,9 @@ void lfsr_g (){
 	
 	do
 	{
-			//cout << lfsr << endl;
-			outputFile << lfsr << endl;
-			aux = lfsr & um;   
+		//cout << lfsr << endl;
+		outputFile << lfsr << endl;
+		aux = lfsr & um;   
 	    	lfsr >>= 1;              
 	    	if (aux==um) {
 			//configuração dos taps nas posições 32, 22, 2 e 1, conforme polinômio primitivo para 32 bits	                 
